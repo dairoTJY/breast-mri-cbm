@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs and outputs
+logs/
+log_*/
+eval_out/
+*.log
+*.csv
+*.txt
+
+# Checkpoints and model files
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Medical imaging / data artifacts
+*.nii
+*.nii.gz
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+
+# Local metadata / secrets
+.env
+*.jsonl
+
+# Keep repository-level docs and config JSONs only if intentionally added
+# Remove this ignore rule if you plan to commit public JSON examples
+# *.json
