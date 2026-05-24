@@ -56,11 +56,6 @@ export ISPY2_SPLIT_JSON_PATH=./split_seed20.json
 python code/train_resnet.py 20
 ```
 
-Outputs are written under `./log_resnet_onefold` by default. You can override that with:
-
-```bash
-export RESNET_LOG_DIR=./log_resnet_onefold
-```
 
 ## Training the CBM
 
@@ -70,40 +65,6 @@ The CBM script requires:
 - a trained ResNet checkpoint
 - concept embeddings in `.pt` format
 
-Example:
-
-```bash
-python code/train_cbm.py \
-  --mode train \
-  --json_path ./ISPY2_json_minimal.json \
-  --split_json ./split_seed20.json \
-  --resnet_ckpt ./resnet_best.pt \
-  --concept_pt ./concept_embeddings.pt \
-  --resnet_depth 50 \
-  --img_size_dce 160 160 160 \
-  --batch_size 8 \
-  --epochs 30 \
-  --lr 1e-3 \
-  --weight_decay 1e-3 \
-  --out_root ./log_icb \
-  --run_name release_run
-```
-
-## CBM Evaluation
-
-Example:
-
-```bash
-python code/train_cbm.py \
-  --mode eval \
-  --json_path ./ISPY2_json_minimal.json \
-  --split_json ./split_seed20.json \
-  --resnet_ckpt ./resnet_best.pt \
-  --concept_pt ./concept_embeddings.pt \
-  --eval_ckpt ./log_icb/release_run/best.pt \
-  --eval_split test \
-  --out_dir ./eval_out
-```
 
 ## Weights and Reproducibility
 
